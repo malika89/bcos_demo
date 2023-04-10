@@ -1,0 +1,7 @@
+host: 127.0.0.1
+port: 8088
+logLevel: debug
+logPath : debug.log
+contractAddress: 0x8ed15526a2c81e4f52d0ef9ba91c1441c1010ba0
+isGm : false
+configFile: sdk_config.toml

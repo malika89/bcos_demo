@@ -1,0 +1,96 @@
+{
+  "info": {
+    "_postman_id": "9ea578dd-65c0-484e-84b5-456671304083",
+    "name": "bcos demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8795796"
+  },
+  "item": [
+    {
+      "name": "添加交易信息",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"player_id\":\"0x690B9A9E9aa1C9dB991C7721a92d351Db4FaC990\",\"pool_address\":\"0x33baf43a1e7534FE46507a7d4A001881ae9CCA44\",\"order_hash\":\"0x703adecaa69b19187594a4cbb317ee88c8fb4979356cad51c9304b527a1c3e13\",\"amount\":22,\"timestamp\":1680927223,\"lottery_number\":\"202304080001\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8088/v1/lottery",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8088",
+          "path": [
+            "v1",
+            "lottery"
+          ]
+        }
+      },
+      "response": [{
+        "code": 200,
+        "message": "",
+        "result": {
+          "hash": "0x7b989f5ef7503357e97c64af0184b1ab9590bd248cc42063b9c7600d3baad7b0"
+        }
+      }]
+    },
+    {
+      "name": "查询交易",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8088/v1/lottery?txId=0x3024b7315d23a2f21715bdfec760148bcb0882e59da40c3d5e45b48bf022026c",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8088",
+          "path": [
+            "v1",
+            "lottery"
+          ],
+          "query": [
+            {
+              "key": "txId",
+              "value": "0xfe92be91f174b828f5ade9babad57b78bc61e295",
+              "disabled": true
+            },
+            {
+              "key": "txId",
+              "value": "0x3024b7315d23a2f21715bdfec760148bcb0882e59da40c3d5e45b48bf022026c"
+            },
+            {
+              "key": "height",
+              "value": "9",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": [{
+        "code": 200,
+        "message": "",
+        "result": {
+          "from": "0x690B9A9E9aa1C9dB991C7721a92d351Db4FaC990",
+          "to": "0x33baf43a1e7534FE46507a7d4A001881ae9CCA44",
+          "value": "0x3024b7315d23a2f21715bdfec760148bcb0882e59da40c3d5e45b48bf022026c",
+          "data": "{\"amount\":1110,\"lottery_num\":\"202304080004\",\"timestamp\":1680927280}"
+        }
+      }]
+    }
+  ]
+}
